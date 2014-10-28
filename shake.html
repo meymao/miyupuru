@@ -1,1 +1,27 @@
-<html lang="la">
+<html lang="ja">
+<head>
+<title>miyupuru</title>
+
+<script language="JavaScript"><!--
+x=100;
+y=100;
+v=2;
+
+function purupuru()
+{
+x+=v;
+if((x>1)||(x<0))v=-v; 
+
+document.ballImage.style.left=x;
+}
+// --></script>
+
+</head>
+
+<body onLoad="setInterval('purupuru()',25)">
+
+
+<img src="http://f.st-hatena.com/images/fotolife/m/meymao/20130904/20130904134715.png" name="ballImage" style="position:absolute;left:0px;top:16px;">
+
+</body>
+</html>
