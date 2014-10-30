@@ -1,27 +1,39 @@
 <html lang="ja">
 <head>
 <title>miyupuru</title>
-
+<style type="text/css">
+  #miyupuri {
+    position: absolute;
+    top: 16;
+    left: 100;
+  }
+</style>
 <script language="JavaScript"><!--
-x=100;
-y=100;
-v=2;
-
-function purupuru()
-{
-x+=v;
-if((x>1)||(x<0))v=-v; 
-
-document.ballImage.style.left=x;
-}
+var puruImage = function (el, vibrationRate, interval) {
+  var x = el.offsetLeft;
+  el.style.left = x;
+  var direction = -1;
+  setInterval(function() {
+    el.style.left = parseInt(el.style.left) + direction * vibrationRate;
+    direction = -direction;
+  }, interval);
+};
+ 
+var moveImage = function (el, rate, interval) {
+  setInterval(function() {
+    el.style.left = parseInt(el.style.left) + rate;
+  }, interval);
+};
+ 
+document.addEventListener("DOMContentLoaded", function() {
+  puruImage(document.getElementById("miyupuri"), 15, 25);
+  moveImage(document.getElementById("miyupuri"), 10, 25);
+});
 // --></script>
-
+ 
 </head>
-
-<body onLoad="setInterval('purupuru()',25)">
-
-
-<img src="http://f.st-hatena.com/images/fotolife/m/meymao/20130904/20130904134715.png" name="ballImage" style="position:absolute;left:0px;top:16px;">
-
+ 
+<body>
+<img id="miyupuri" src="http://f.st-hatena.com/images/fotolife/m/meymao/20130904/20130904134715.png">
 </body>
 </html>
