@@ -7,13 +7,19 @@ body {
   background-size: contain;
 }
 
-  #miyupuri {
+  #miyupuri1 {
     position: absolute;
     top: 250;
     left: 100;
   }
   
-  #meymao {
+  #miyupuri2 {
+    position: absolute;
+    top: 250;
+    left: 100;
+  }
+  
+    #miyupuri3 {
     position: absolute;
     top: 250;
     left: 100;
@@ -37,20 +43,26 @@ var moveImage = function (el, rate, interval) {
 };
  
 document.addEventListener("DOMContentLoaded", function() {
-  puruImage(document.getElementById("miyupuri"), 15, 25);
-  moveImage(document.getElementById("miyupuri"), 8, 25);
+  puruImage(document.getElementById("miyupuri1"), 15, 25);
+  moveImage(document.getElementById("miyupuri1"), 8, 25);
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-  puruImage(document.getElementById("meymao"), 0, 0);
-  moveImage(document.getElementById("meymao"), 10, 10);
+  puruImage(document.getElementById("miyupuri2"), 0, 0);
+  moveImage(document.getElementById("miyupuri2"), 10, 10);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  puruImage(document.getElementById("miyupuri3"), 5, 5);
+  moveImage(document.getElementById("miyupuri3"), 30, 50);
 });
 // --></script>
  
 </head>
  
 <body>
-<img id="miyupuri" src="http://f.st-hatena.com/images/fotolife/m/meymao/20141031/20141031230250.png?1414764181">
-<img id="meymao" src="http://f.st-hatena.com/images/fotolife/m/meymao/20141031/20141031230250.png?1414764181">
+<img id="miyupuri1" src="http://f.st-hatena.com/images/fotolife/m/meymao/20141031/20141031230250.png?1414764181">
+<img id="miyupuri2" src="http://f.st-hatena.com/images/fotolife/m/meymao/20141031/20141031230250.png?1414764181">
+<img id="miyupuri3" src="http://f.st-hatena.com/images/fotolife/m/meymao/20141031/20141031230250.png?1414764181">
 </body>
 </html>
