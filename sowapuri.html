@@ -1,0 +1,40 @@
+<html lang="ja">
+<head>
+<title>miyupuru</title>
+<style type="text/css">
+body {
+  background: url("http://f.st-hatena.com/images/fotolife/m/meymao/20150327/20150327205352_original.jpg?1427457251");
+  background-size: contain;
+}
+
+</style>
+
+<script language="JavaScript"><!--  
+x=100;
+y=100;
+v=15;
+
+var baseLeft = 0;
+function purupuru()
+{
+x+=v;
+if((x>1)||(x<0))v=-v; 
+
+baseLeft += 8;
+document.ballImage.style.left=x+baseLeft;
+if (document.body.offsetWidth < x+baseLeft) {
+  setTimeout(function() {
+    baseLeft = -300;
+  }, 3000);
+}
+}
+// --></script>
+
+</head>
+<head>
+<body onLoad="setInterval('purupuru()',100)">
+
+<img src="http://f.st-hatena.com/images/fotolife/m/meymao/20141030/20141030211410.png?1414671368" name="ballImage" style="position:absolute;left:100px;top:16px;">
+
+</body>
+
