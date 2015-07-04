@@ -6,9 +6,9 @@ my %heavy = ( #キログラム単位
 	"そらやん" => 183000, #ジャンボ機（ボーイング747-400）の重量
 	"すあま" => 0.2 #面倒なので大体200gということで
 	); 
-my @animal = sort by_heaby_and_species keys %heavy;
+my @animal = sort by_heavy_and_species keys %heavy;
 
-sub by_heaby_and_species {
+sub by_heavy_and_species {
 	$heavy{$b} <=> $heavy{$a}
 	    or
 	$a cmp $b
